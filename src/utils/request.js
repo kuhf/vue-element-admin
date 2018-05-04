@@ -2,6 +2,7 @@ import axios from 'axios'
 import { Message } from 'element-ui'
 import store from '@/store'
 import { getToken } from '@/utils/auth'
+require('promise.prototype.finally').shim()
 
 // create an axios instance
 const service = axios.create({
@@ -22,7 +23,7 @@ service.interceptors.request.use(config => {
   Promise.reject(error)
 })
 
-// respone interceptor
+// response interceptor
 service.interceptors.response.use(
   response => response,
   /**

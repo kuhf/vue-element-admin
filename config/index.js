@@ -10,7 +10,12 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {  
+      '/yxtstore': {  
+          target: 'http://192.168.1.16:808',  
+          changeOrigin: true,  
+      }  
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
@@ -57,7 +62,7 @@ module.exports = {
     assetsSubDirectory: 'static',
 
     // you can set by youself according to actual condition
-    assetsPublicPath: './',
+    assetsPublicPath: './backend/',
 
     /**
      * Source Maps
