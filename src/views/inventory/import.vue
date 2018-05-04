@@ -57,7 +57,7 @@
                   accept=".xlsx"
                   :before-upload="handleUpload"
                   :show-file-list="false">
-                  <el-button slot="trigger" type="primary">导出数据</el-button>
+                  <el-button slot="trigger" type="primary">导入数据</el-button>
               </el-upload>
             </el-form-item>
           </el-col>
